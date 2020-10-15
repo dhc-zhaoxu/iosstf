@@ -93,7 +93,7 @@ module.exports = function InstallService(
     return StorageService.storeFile('apk', $files, {
         filter: function(file) {
           if(file.name.indexOf('.apk')!=-1){
-            return /\.apk$/i.test(file.name)
+            return /\.(apk|aab)$/i.test(file.name)
           }
           else {
             return /\.ipa$/i.test(file.name)
